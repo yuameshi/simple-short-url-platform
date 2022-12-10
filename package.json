@@ -14,21 +14,21 @@
 		"url": "git+https://github.com/Yuameshi/simple-short-url.git"
 	},
 	"keywords": [
-		"short",
+		"short-url",
 		"cloudfare",
-		"cloudflare workers"
+		"cloudflare workers",
+		"cloudflare pages"
 	],
 	"author": "Yuameshi <64469437+Yuameshi@users.noreply.github.com> (https://www.yuameshi.top/)",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/Yuameshi/simple-short-url/issues"
 	},
-	"homepage": "https://github.com/Yuameshi/simple-short-url#readme",
+	"homepage": "https://short-url.yuameshi.top/",
 	"devDependencies": {
 		"vite": "^4.0.0",
-		"vite-plugin-html": "^3.2.0"
-	},
-	"dependencies": {
+		"vite-plugin-html": "^3.2.0",
 		"@vitejs/plugin-legacy": "^3.0.1"
-	}
+	},
+	"dependencies": {}
 }

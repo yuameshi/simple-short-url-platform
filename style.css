@@ -1,0 +1,32 @@
+#form {
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 500px;
+	max-height: 500px;
+	margin: 25px;
+}
+
+#form div.mdui-textfield {
+	width: 100%;
+	margin: 25px 0;
+}
+
+#link-result{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer.mdui-footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+footer.mdui-footer p{
+	margin: 1.5px 0;
+}

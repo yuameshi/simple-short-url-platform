@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>短链接生成平台</title>
+		<!-- 引入MDUI的CSS文件 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css" />
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+
+	<body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto">
+		<!-- 引入MDUI的JS文件 -->
+		<script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js" async></script>
+		<script src="./index.js" async type="module"></script>
+		<header class="mdui-appbar mdui-color-theme">
+			<div class="mdui-toolbar mdui-container">
+				<a href="javascript:;" class="mdui-typo-headline">短链接生成</a>
+			</div>
+		</header>
+		<main>
+			<!-- 主要内容区域 -->
+			<form id="form-generate" class="mdui-container">
+				<div id="form" class="mdui-center">
+					<div class="mdui-textfield mdui-textfield-floating-label">
+						<label class="mdui-textfield-label">原始链接</label>
+						<input class="mdui-textfield-input" type="url" id="input-link" required />
+					</div>
+					<button class="mdui-btn mdui-color-theme-accent mdui-ripple" id="button-generate">生成短链接</button>
+				</div>
+			</form>
+			<!-- 生成结果展示区域 -->
+			<div id="link-result" class="mdui-container mdui-typo mdui-hidden">
+				<p>短链接：<a id="short-link" href="#"></a></p>
+			</div>
+		</main>
+		<footer class="mdui-footer mdui-typo">
+			<p>Copyright &copy; 2022 糸</p>
+			<p>个人主页：<a href="https://www.yuameshi.top/" target="_blank">糸の窝</a></p>
+		</footer>
+	</body>
+</html>
+

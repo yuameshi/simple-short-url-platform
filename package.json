@@ -1,0 +1,34 @@
+{
+	"name": "simple-short-url",
+	"version": "1.0.0",
+	"description": "Short URL generator which uses Cloudflare Workers as backend.",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"dev": "vite --mode development",
+		"build": "vite build --mode production",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Yuameshi/simple-short-url.git"
+	},
+	"keywords": [
+		"short",
+		"cloudfare",
+		"cloudflare workers"
+	],
+	"author": "Yuameshi <64469437+Yuameshi@users.noreply.github.com> (https://www.yuameshi.top/)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Yuameshi/simple-short-url/issues"
+	},
+	"homepage": "https://github.com/Yuameshi/simple-short-url#readme",
+	"devDependencies": {
+		"vite": "^4.0.0",
+		"vite-plugin-html": "^3.2.0"
+	},
+	"dependencies": {
+		"@vitejs/plugin-legacy": "^3.0.1"
+	}
+}

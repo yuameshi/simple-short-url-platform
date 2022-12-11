@@ -4,20 +4,12 @@ addEventListener('fetch', (event) => {
 		event.respondWith(handleShortUrlGenerator(request));
 	} else if (request.method === 'GET') {
 		event.respondWith(handleShortUrlRedirector(request));
-	} else if (request.method === 'OPTIONS') {
-		// Handle CORS preflight requests
-		return new Response('', {
-			status: 200,
-			headers: {
-				'Access-Control-Allow-Origin': '*',
-			},
-		});
 	} else {
 		event.respondWith(
 			new Response('Method not allowed', {
 				status: 405,
 				headers: {
-					'Access-Control-Allow-Origin': '*',
+					'Access-Control-Allow-Origin': 'https://short-url.yuameshi.top',
 				},
 			})
 		);
@@ -33,21 +25,21 @@ async function handleShortUrlGenerator(request) {
 		return new Response('Not a valid URL', {
 			status: 400,
 			headers: {
-				'Access-Control-Allow-Origin': '*',
+				'Access-Control-Allow-Origin': 'https://short-url.yuameshi.top',
 			},
 		});
 	}
 	// 使用 KV 存储来存储长链接和短链接之间的映射关系
 	const namespace = 'short-urls';
 	const shortId = SHA256(longUrl).slice(0, 8); // 生成随机的短链接
-	const shortUrl = `https://${new URL(request.url).host}/${shortId}`;
+	const shortUrl = `https://${new URL(request.url).host.replace('xn--o9z.cf', '糸.cf')}/${shortId}`;
 	await SHORT_URL_DATABASE.put(shortId, longUrl);
 
 	// 返回短链接
 	return new Response(shortUrl, {
 		status: 200,
 		headers: {
-			'Access-Control-Allow-Origin': '*',
+			'Access-Control-Allow-Origin': 'https://short-url.yuameshi.top',
 		},
 	});
 }
@@ -66,7 +58,7 @@ async function handleShortUrlRedirector(request) {
 		// 	status: 404,
 		// });
 		// 否则，返回一个重定向响应
-		return Response.redirect('https://www.drblack-system.com/', 302);
+		return Response.redirect('https://short-url.yuameshi.top/', 302);
 	}
 }
 

@@ -18,7 +18,7 @@ addEventListener('fetch', (event) => {
 
 async function handleShortUrlGenerator(request) {
 	// 解析请求体中的长链接
-	const longUrl = await request.text();
+	let longUrl = await request.text();
 	try {
 		new URL(longUrl);
 	} catch (e) {
@@ -29,8 +29,8 @@ async function handleShortUrlGenerator(request) {
 			},
 		});
 	}
+	longUrl = new URL(longUrl).href; // 标准化长链接
 	// 使用 KV 存储来存储长链接和短链接之间的映射关系
-	const namespace = 'short-urls';
 	const shortId = SHA256(longUrl).slice(0, 8); // 生成随机的短链接
 	const shortUrl = `https://${new URL(request.url).host.replace('xn--o9z.cf', '糸.cf')}/${shortId}`;
 	await SHORT_URL_DATABASE.put(shortId, longUrl);

@@ -26,9 +26,9 @@
 	},
 	"homepage": "https://short-url.yuameshi.top/",
 	"devDependencies": {
+		"@types/node": "^18.11.15",
+		"@vitejs/plugin-legacy": "^3.0.1",
 		"vite": "^4.0.1",
-		"vite-plugin-html": "^3.2.0",
-		"@vitejs/plugin-legacy": "^3.0.1"
-	},
-	"dependencies": {}
+		"vite-plugin-html": "^3.2.0"
+	}
 }

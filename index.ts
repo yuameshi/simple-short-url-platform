@@ -15,7 +15,7 @@ form?.addEventListener('submit', async (e) => {
 	// 在这里处理原始链接，生成短链接
 	// 这里假设已经生成了一个短链接，结果保存在变量shortLinkValue中
 	const XHR = new XMLHttpRequest();
-	XHR.open('POST', 'https://糸.cf/');
+	XHR.open('POST', 'https://呃呃.top/');
 	XHR.addEventListener('load', () => {
 		const shortLinkValue = XHR.responseText;
 		// 更新页面中的短链接显示区域
